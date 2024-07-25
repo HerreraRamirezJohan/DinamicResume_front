@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import Navbar from '@Components/Layout/Navbar'
+import Footer from '@Components/Layout/Footer';
 import { Outlet } from 'react-router-dom';
 
 const Layout = ({ children }) => {
   return (
     <>
-      <header>
+      <header className='relative'>
         <Navbar />
       </header>
       <main>
