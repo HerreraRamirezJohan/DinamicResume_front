@@ -1,9 +1,8 @@
-import React from 'react';
 import Navbar from '@Components/Layout/Navbar'
 import Footer from '@Components/Layout/Footer';
 import { Outlet } from 'react-router-dom';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <header className='relative'>

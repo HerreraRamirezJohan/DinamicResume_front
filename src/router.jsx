@@ -1,4 +1,3 @@
-import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { lazy } from 'react';
 
@@ -16,7 +15,7 @@ const routes = createBrowserRouter([
         element: <Layout />,
         children: [
             { index: true, element: <Home /> },
-            { path: "auth", element: <Auth /> },
+            { path: "signup", element: <Auth /> },
             { path: "signin", element: <Auth /> },
         ],
     },

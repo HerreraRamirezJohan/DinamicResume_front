@@ -1,27 +1,11 @@
-import React from 'react';
-
 const Footer = () => {
   return (
-    <footer style={styles.footer}>
-      <p style={styles.text}>&copy; 2024 Your Company Name. All rights reserved.</p>
+    <footer className="bg-gray-800 text-white py-6">
+      <div className="container mx-auto">
+        <p className="text-center">&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
     </footer>
   );
-};
-
-const styles = {
-  footer: {
-    backgroundColor: 'black',
-    color: 'white',
-    padding: '1rem',
-    textAlign: 'center',
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-  text: {
-    margin: 0,
-  },
 };
 
 export default Footer;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import HomeLinks from '@Components/NavbarComponents/HomeLinks'
 
@@ -30,11 +30,11 @@ const Navbar = () => {
         <div className="hidden md:flex gap-4" id="links_navbar">
           <HomeLinks handleScroll={handleScroll} toggleMenu={toggleMenu} />
         </div>
-        <li className="hidden md:flex space-x-4 ">
+        <div className="hidden md:flex space-x-4 ">
           <Link to="/signin" className="bg-black text-[#3BC020] px-4 py-2 rounded-md">
             Sign In
           </Link>
-        </li>
+        </div>
         <div className="flex md:hidden">
           <button
             onClick={toggleMenu}

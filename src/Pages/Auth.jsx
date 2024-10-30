@@ -1,7 +1,16 @@
-import React from 'react';
-
+import Login from "@Components/Auth/login";
+import Signup from "@Components/Auth/signup";
+import { useLocation } from 'react-router-dom';
 const Auth = () => {
-  return <h1 className='text-7xl text-red-950'>Auth</h1>;
+  const location = useLocation();
+  return (
+
+    // Comprobamos si la URL es /signin o /signup para renderizar el componente adecuado
+    <>
+      {location.pathname === "/signin" && <Login />}
+      {location.pathname === "/signup" && <Signup />}
+    </>
+  )
 };
 
 export default Auth;
