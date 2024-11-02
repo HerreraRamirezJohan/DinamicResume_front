@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
 import services from '@Mooks/Services.json'
 import aboutus from '@Mooks/Aboutus.json'
+import Card from '@Components/Home/Card';
+import Services from '@Components/Home/Services';
 const Home = () => {
   return (
     <div className='bg-[#2C332B]'>
@@ -18,22 +19,13 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="flex items-center justify-start p-10">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4 text-white poppins-regular text-left">Services</h1>
-          <div className='flex gap-x-3'>
-            {services.map((service, index) => (
-              <Card key={index} title={service.title} content={service.content} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Services services={services} />
 
       {/* About Us Section */}
       <section id="about" className="flex items-center justify-start p-10">
-        <div className="text-center">
+        <div className="text-center w-full">
           <h1 className="text-3xl font-bold mb-4 text-white poppins-regular text-left">About Us</h1>
-          <div className='flex gap-x-3'>
+          <div className='flex gap-3 overflow-x-auto'>
             {aboutus.map((card, index) => (
               <Card key={index} title={card.title} content={card.content} />
             ))}
@@ -43,18 +35,5 @@ const Home = () => {
     </div>
   );
 };
-
-const Card = ({ title, content }) => {
-  return (
-    <div className="bg-[#656363] rounded-lg p-4 min-w-[250px] h-[350px] flex flex-col justify-between items-start">
-      <h2 className="text-[#3BC020] text-lg font-semibold">{title}</h2>
-      <p className="text-white text-sm text-left break-normal poppins-regular">{content}</p>
-    </div>
-  );
-};
-Card.propTypes = {
-  title: PropTypes.string,
-  content: PropTypes.string
-}
 
 export default Home;

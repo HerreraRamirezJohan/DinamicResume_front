@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-function Login() {
+function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  // const [passwordConnfirmation, setPasswordConfirmation] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -42,11 +42,23 @@ function Login() {
             />
           </div>
 
+          <div>
+            <label className="block text-sm font-medium text-white">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="[0 - 9], [a - Z], [*/$&@]"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="mt-1 block w-full px-4 py-2 bg-[#E0E2F6] text-[#7C7878] rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+
           <button
             type="submit"
             className="w-full bg-[#3BC020] hover:bg-green-600 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           >
-            Register
+            Login
           </button>
         </form>
 
@@ -61,4 +73,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
